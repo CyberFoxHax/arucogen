@@ -3,6 +3,7 @@
 	<head>
 		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 		<script type="text/javascript" src="main.js"></script>
+		<script type="text/javascript" src="dict.json"></script>
 		<link rel="stylesheet" href="main.css"/>
 		<meta name="description" content="Generate ArUco marker for printing with dictionary selection">
 		<meta name="keywords" content="ArUco, OpenCV, marker, generate, dictionary, print, computer vision, robotics">
@@ -30,6 +31,13 @@
 			<div class="field">
 				<label for="frm-size">Marker size, mm:</label>
 				<input id="frm-size" name="size" type="number" min="10" max="5000" value="100">
+			</div>
+			<div class="field">
+				<label for="frm-output">Output:</label>
+				<select name="output_format" id="frm-output">
+					<option value="Svg" data-width="5" data-height="5">Svg</option>
+					<option value="Canvas" data-width="5" data-height="5">Canvas</option>
+				</select>
 			</div>
 		</form>
 
